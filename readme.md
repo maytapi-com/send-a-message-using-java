@@ -15,12 +15,57 @@ This repository demonstrates how to send a WhatsApp message using Java and the M
 - Unirest-java library
 - Maytapi account and API credentials
 
+## Installation
+1. Clone this repository:<br/>
+```
+https://github.com/maytapi-com/send-a-message-with-java-using-whatsapp-api.git
+cd project-folder
+```
+2. Configure your Maytapi credentials:<br/>
+```
+product.id=your_product_id
+phone.id=your_phone_id
+api.key=your_api_key
+```
+3. Build the project:
+```bash
+mvn clean install
+```
+
+## Usage 
+To send a test message, run the SendMessage class:
+```bash
+mvn exec:java -Dexec.mainClass="com.example.SendMessage"
+```
+To use in your own project:
+1. Add the necessary dependencies to your pom.xml:
+```
+<dependencies>
+<dependency>
+<groupId>com.konghq</groupId>
+<artifactId>unirest-java</artifactId>
+<version>3.13.6</version>
+</dependency>
+<dependency>
+<groupId>org.json</groupId>
+<artifactId>json</artifactId>
+<version>20210307</version>
+</dependency>
+</dependencies>
+```
+
+2. Use the SendMessage class as a reference to implement the API call in your code.
+
 ## Quick Start
 
 1. Clone this repository
-2. Configure your Maytapi credentials in `src/main/resources/config.properties`
-3. Run `mvn clean install` to build the project
-4. Execute the `SendMessage` class to send a test message
+2. Configure your Maytapi credentials in src/main/resources/config.properties
+3. Run mvn clean install to build the project
+4. Execute the SendMessage class to send a test message
+
+> [!NOTE]
+> **To perform all these operations correctly, you need to register with maytapi.com, get the credentials, and place them in the config file.**
+
 
 ## Why Maytapi?
 
@@ -39,4 +84,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Support
 
-For questions about Maytapi's WhatsApp API, visit their [official documentation](https://maytapi.com/whatsapp-api-documentation) or contact their support team.
+For questions about Maytapi's WhatsApp API, visit [official documentation](https://maytapi.com/whatsapp-api-documentation) or contact  support team.
